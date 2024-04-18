@@ -3,11 +3,34 @@ package animaux;
 
 public class Animal {
 	
-	public void displayName() {
-		System.out.println("This is My name");
+	private String nom;
+    private int age;
+    private String sexe;
+
+	public Animal(String nom, int age, String sexe) {
+		 this.nom = nom;
+	     this.age = age;
+	     this.sexe = sexe;
 	}
-	public void displayAge() {
-		System.out.println("This is My age");
-	}
+
+	public void manger() {
+        System.out.println(this.getNom() + " mange.");
+    }
+
+    public void dormir() {
+        System.out.println(this.getNom() + " dort.");
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getSexe() {
+        return sexe;
+    }
 	
 }
